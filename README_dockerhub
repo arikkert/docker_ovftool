@@ -1,0 +1,9 @@
+#
+# how it was uploaded to dockerhub
+#
+
+docker build --tag arikkert/ovftool:4.6.0 .
+docker images
+docker run -it --rm arikkert/ovftool:4.6.0 --version
+docker login --username arikkert
+docker push arikkert/ovftool:4.6.0
