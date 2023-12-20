@@ -1,1 +1,1 @@
-based on https://hub.docker.com/r/maroskukan/ovftool
+based on https://github.com/maroskukan/ovftool
