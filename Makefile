@@ -8,3 +8,6 @@ test01:
 
 test02:
 	docker run -it --rm $(IMAGE) --help
+
+scan:
+	trivy image $(IMAGE)
