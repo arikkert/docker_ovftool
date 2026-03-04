@@ -13,4 +13,4 @@ debug:
 	docker run -it --rm --entrypoint /bin/sh ovftool
 
 scan:
-	trivy image $(IMAGE)
+	trivy image --severity HIGH,CRITICAL $(IMAGE)
