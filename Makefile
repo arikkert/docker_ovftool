@@ -12,5 +12,10 @@ test02:
 debug:
 	docker run -it --rm --entrypoint /bin/sh ovftool
 
-scan:
-	trivy image --severity HIGH,CRITICAL $(IMAGE)
+trivy:
+	$@ image --severity HIGH,CRITICAL $(IMAGE)
+
+gitleaks:
+	$@ git .
+
+scan: gitleaks trivy
